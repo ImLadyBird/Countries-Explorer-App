@@ -13,7 +13,7 @@ export default function Navbar() {
       link: "/countries",
     },
     {
-      id: 1,
+      id: 3,
       text: "About",
       link: "/about",
     },
@@ -27,7 +27,7 @@ export default function Navbar() {
       <ul className="flex flex-row gap-6 items-center justify-center md:border-l md:border-[#bcbcbcd8] md:pl-8">
         {Nav.map((item) => {
           return (
-            <li className="font-medium text-center  hover:text-gray-300">
+            <li className="font-medium text-center  hover:text-gray-300" key={item.id}>
               <NavLink to={item.link}>{item.text}</NavLink>
             </li>
           );

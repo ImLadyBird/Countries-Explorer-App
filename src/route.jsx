@@ -6,15 +6,15 @@ import { createBrowserRouter } from 'react-router'
 
 export const router = createBrowserRouter([
     {
-        path: '/',
-        Element: <Home />
+        path : "/",
+        element : <Home />
     },
     {
-        path: '/countries',
-        Element: <Countries />
+        path : "/countries",
+        element : <Countries />
     },
     {
-        path: '/aboutus',
-        Element: <AboutUs />
+        path : "/about",
+        element : <AboutUs />
     }
 ])

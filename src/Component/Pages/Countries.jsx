@@ -1,7 +1,9 @@
+import Navbar from "../Shared/Navbar";
+
 export default function Countries() {
   return (
     <>
-      <h1>Countries</h1>
+      <Navbar />
     </>
   );
 }

@@ -9,6 +9,10 @@ export default function Country() {
   const { countryname } = useParams();
   const [loading, setLoading] = useState(true);
 
+   useEffect(() => {
+    getData();
+  }, [countryname]);
+
   async function getData() {
     try {
       setLoading(true);
@@ -21,10 +25,6 @@ export default function Country() {
       setLoading(false);
     }
   }
-
-  useEffect(() => {
-    getData();
-  }, [countryname]);
 
   return (
     <div className="container flex flex-col items-center justify-center ">

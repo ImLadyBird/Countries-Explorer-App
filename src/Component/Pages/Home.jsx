@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="container flex flex-col px-2 py-32 md:px-12 md:flex-row md:gap-10">
+      <div className="container flex flex-col px-2 py-23 md:px-12 md:flex-row md:gap-10">
         <div className="flex flex-col items-start justify-center  ">
           <h1 className="text-4xl font-extrabold lg:text-5xl">
             Explore Countries with

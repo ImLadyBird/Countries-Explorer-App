@@ -45,7 +45,6 @@ export default function Countries() {
             c.region && c.region.toLowerCase() === selectedRegion.toLowerCase()
         );
       }
-
       setCountry(data);
     } catch {
       console.log("error");

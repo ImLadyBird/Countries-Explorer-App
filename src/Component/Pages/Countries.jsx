@@ -4,6 +4,7 @@ import { client } from "../../Lib/Index";
 import Cards from "../Shared/Cards";
 import Search from "../Shared/Search";
 import SelectRegion from "../Shared/SelectREgion";
+import loadingimg from "../Images/loading.svg";
 
 export default function Countries() {
   const [Country, setCountry] = useState([]);
@@ -21,8 +22,8 @@ export default function Countries() {
   }, [searchQuery, selectedRegion]);
 
   async function getData() {
-    setLoading(true);
     try {
+      setLoading(true);
       let response;
       if (searchQuery) {
         response = await client.get(`/name/${searchQuery}`);
@@ -54,15 +55,21 @@ export default function Countries() {
   }
 
   return (
-    <>
+    <div className="container flex flex-col justify-center ">
       <Navbar />
-      <Search setSearchQuery={setSearchQuery} />
-      <SelectRegion setSelectedRegion={setSelectedRegion} />
+      <div className="flex flex-col sm:flex-row mx-5 mb-5 gap-4">
+        <div className="flex-1">
+          <Search setSearchQuery={setSearchQuery} />
+        </div>
+        <div className="flex-1">
+          <SelectRegion setSelectedRegion={setSelectedRegion} />
+        </div>
+      </div>
       {loading ? (
-        <div className="px-5">Loading...</div>
+        <img src={loadingimg} alt="loading" className="w-[100px] self-center" />
       ) : (
         <Cards countries={Country} />
       )}
-    </>
+    </div>
   );
 }

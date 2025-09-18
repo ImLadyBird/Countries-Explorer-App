@@ -19,15 +19,15 @@ export default function Home() {
             to regions!
           </p>
           <div className="flex flex-col md:flex-row w-full md:gap-2 ">
-            <button className="flex items-center justify-center bg-blue-700 text-white px-4 py-2 rounded-md  hover:bg-white hover:text-black  md:px-6 md:py-4 md:font-medium cursor-pointer">
+            <button className="flex items-center justify-center bg-blue-700 text-white px-4 py-2 rounded-md shadow-xl hover:bg-white hover:text-black  md:px-6 md:py-4 md:font-medium cursor-pointer">
               <Link to={"/countries"}>Explore Now</Link>
             </button>
-            <button className="flex items-center justify-center bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-white hover:text-black md:px-6 md:py-4 md:font-medium cursor-pointer">
+            <button className="flex items-center justify-center bg-gray-100 text-gray-500 px-4 py-2 rounded-md shadow-xl hover:bg-white hover:text-black md:px-6 md:py-4 md:font-medium cursor-pointer">
               <Link to={"/about"}>Learn More</Link>
             </button>
           </div>
         </div>
-        <img src={mainimg} alt="image" className="w-full rounded-lg md:w-1/2" />
+        <img src={mainimg} alt="image" className="w-full rounded-lg md:w-1/2 shadow-xl/20" />
       </div>
     </div>
   );

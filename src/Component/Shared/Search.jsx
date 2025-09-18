@@ -1,12 +1,10 @@
-
-
-export default function Search({setSearchQuery}) {
+export default function Search({ setSearchQuery }) {
   return (
     <div>
       <input
-       onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => setSearchQuery(e.target.value)}
         type="text"
-        className="w-1/2 p-2 border-1 border-gray-400 rounded-lg mx-5 my-5"
+        className="border border-gray-400 rounded-lg p-2 w-full"
         placeholder="Search by name ...."
       />
     </div>
